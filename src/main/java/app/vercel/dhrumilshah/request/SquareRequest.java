@@ -6,17 +6,17 @@ import com.google.inject.Inject;
 public class SquareRequest {
     DrawShape shape;
 
-    @Inject
-    public SquareRequest(DrawShape shape) {
+    public SquareRequest() {
         System.out.println("Instantiating SquareRequest object.");
+    }
+
+    @Inject
+    public void setDrawShape(DrawShape shape) {
+        System.out.println("Setting shape in SquareRequest.");
         this.shape = shape;
     }
 
     public void makeRequest() {
         shape.draw();
-    }
-
-    public DrawShape getShape() {
-        return shape;
     }
 }
