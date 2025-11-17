@@ -1,8 +1,9 @@
 package app.vercel.dhrumilshah;
 
+import app.vercel.dhrumilshah.module.ShapeModule;
 import app.vercel.dhrumilshah.request.SquareRequest;
-import app.vercel.dhrumilshah.shape.DrawShape;
-import app.vercel.dhrumilshah.shape.DrawSquare;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 
 public class Demo {
     private static final String SQUARE = "SQUARE";
@@ -10,12 +11,14 @@ public class Demo {
     public static void main(String[] args) {
         String shape = args[0];
 
-        if (SQUARE.equalsIgnoreCase(shape)) {
-            DrawShape square = new DrawSquare();
-            SquareRequest request = new SquareRequest(square);
+        System.out.println("Creating injector.");
+        Injector injector = Guice.createInjector(new ShapeModule());
 
-            System.out.println("Making a request.");
-            request.makeRequest();
+        if (SQUARE.equalsIgnoreCase(shape)) {
+            SquareRequest squareRequest = injector.getInstance(SquareRequest.class);
+
+            System.out.println("Sending a request to draw a square.");
+            squareRequest.makeRequest();
         }
     }
 }
