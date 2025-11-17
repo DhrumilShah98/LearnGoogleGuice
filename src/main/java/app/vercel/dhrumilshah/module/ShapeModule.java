@@ -12,6 +12,8 @@ public class ShapeModule extends AbstractModule {
 
     @Override
     protected void configure() {
+        bind(String.class).toInstance("BLACK");
+        bind(Integer.class).toInstance(40);
         bind(DrawShape.class).to(DrawSquare.class);
     }
 }
