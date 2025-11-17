@@ -1,5 +1,7 @@
 package app.vercel.dhrumilshah.module;
 
+import app.vercel.dhrumilshah.annotation.DefaultColor;
+import app.vercel.dhrumilshah.annotation.DefaultSquareEdge;
 import app.vercel.dhrumilshah.shape.DrawShape;
 import app.vercel.dhrumilshah.shape.DrawSquare;
 import com.google.inject.AbstractModule;
@@ -12,8 +14,8 @@ public class ShapeModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        bind(String.class).toInstance("BLACK");
-        bind(Integer.class).toInstance(40);
+        bind(String.class).annotatedWith(DefaultColor.class).toInstance("BLACK");
+        bind(Integer.class).annotatedWith(DefaultSquareEdge.class).toInstance(40);
         bind(DrawShape.class).to(DrawSquare.class);
     }
 }
