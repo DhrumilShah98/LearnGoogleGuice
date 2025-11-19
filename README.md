@@ -2,6 +2,9 @@
 - Udemy: [Dependency Injection by Google Guice](https://www.udemy.com/course/dependency-injection-by-google-guice)
 - YouTube: [Dependency Injection by Google Guice](https://www.youtube.com/playlist?list=PLp0ed20U4R4jknb4xYdhx3yJn5RhWECxn)
 
+# Certificate of Completion
+- [Gentle Introduction to Dependency Injection by Google Guice](https://www.udemy.com/certificate/UC-e0c7366d-bd2b-4e4a-8dff-1be0b122f0a3/)
+
 ## Dependents and Dependency
 _Class A_ is dependent on _Class B_ if _Class A_ has to do some logic and to do that logic it depends on _Class B_. 
 - _Class A_ -> Dependent
