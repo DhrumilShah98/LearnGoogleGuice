@@ -1,6 +1,5 @@
 package app.vercel.dhrumilshah.request;
 
-import app.vercel.dhrumilshah.annotation.Square;
 import app.vercel.dhrumilshah.shape.DrawShape;
 import com.google.inject.Inject;
 
@@ -8,7 +7,7 @@ public class SquareRequest {
     DrawShape shape;
 
     @Inject
-    public SquareRequest(@Square DrawShape shape) {
+    public SquareRequest(DrawShape shape) {
         System.out.println("Instantiating SquareRequest object.");
         this.shape = shape;
     }
