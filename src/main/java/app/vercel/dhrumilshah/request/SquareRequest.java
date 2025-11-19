@@ -15,4 +15,8 @@ public class SquareRequest {
     public void makeRequest() {
         shape.draw();
     }
+
+    public DrawShape getShape() {
+        return shape;
+    }
 }
