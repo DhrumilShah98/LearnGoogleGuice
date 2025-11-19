@@ -19,12 +19,14 @@ public class Demo {
         if (SQUARE.equalsIgnoreCase(shape)) {
             System.out.println("Sending a request to draw a square.");
             SquareRequest squareRequest = injector.getInstance(SquareRequest.class);
+            System.out.println("Initiating a request to draw a square.");
             squareRequest.makeRequest();
         }
 
         if (CIRCLE.equalsIgnoreCase(shape)) {
             System.out.println("Sending a request to draw a circle.");
             CircleRequest circleRequest = injector.getInstance(CircleRequest.class);
+            System.out.println("Initiating a request to draw a circle.");
             circleRequest.makeRequest();
         }
     }
