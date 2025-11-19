@@ -18,6 +18,7 @@ public class Demo {
 
         if (SQUARE.equalsIgnoreCase(shape)) {
             System.out.println("Sending a request to draw a square.");
+            // Creating an instant of SquareRequest is an example of JIT binding
             SquareRequest squareRequest = injector.getInstance(SquareRequest.class);
             System.out.println("Initiating a request to draw a square.");
             squareRequest.makeRequest();
@@ -25,6 +26,7 @@ public class Demo {
 
         if (CIRCLE.equalsIgnoreCase(shape)) {
             System.out.println("Sending a request to draw a circle.");
+            // Creating an instant of CircleRequest is an example of JIT binding
             CircleRequest circleRequest = injector.getInstance(CircleRequest.class);
             System.out.println("Initiating a request to draw a circle.");
             circleRequest.makeRequest();
