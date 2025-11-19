@@ -1,15 +1,14 @@
 package app.vercel.dhrumilshah.request;
 
-import app.vercel.dhrumilshah.annotation.Circle;
-import app.vercel.dhrumilshah.shape.DrawShape;
+import app.vercel.dhrumilshah.shape.DrawCircle;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
 public class CircleRequest {
-    Provider<DrawShape> shape;
+    Provider<DrawCircle> shape;
 
     @Inject
-    public CircleRequest(@Circle Provider<DrawShape> shape) {
+    public CircleRequest(Provider<DrawCircle> shape) {
         System.out.println("Instantiating CircleRequest object.");
         this.shape = shape;
     }

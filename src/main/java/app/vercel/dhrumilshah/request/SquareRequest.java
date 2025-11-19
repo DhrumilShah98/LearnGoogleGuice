@@ -1,15 +1,14 @@
 package app.vercel.dhrumilshah.request;
 
-import app.vercel.dhrumilshah.annotation.Square;
-import app.vercel.dhrumilshah.shape.DrawShape;
+import app.vercel.dhrumilshah.shape.DrawSquare;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
 public class SquareRequest {
-    Provider<DrawShape> shape;
+    Provider<DrawSquare> shape;
 
     @Inject
-    public SquareRequest(@Square Provider<DrawShape> shape) {
+    public SquareRequest(Provider<DrawSquare> shape) {
         System.out.println("Instantiating SquareRequest object.");
         this.shape = shape;
     }
